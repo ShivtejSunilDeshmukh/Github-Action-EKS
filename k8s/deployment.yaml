@@ -20,7 +20,7 @@ spec:
       containers:
         - name: cloud-dashboard
 
-          image: 720204292745.dkr.ecr.ap-south-1.amazonaws.com/ssd-github-actions-eks:1b03927708c9b337e0d21d9aacd657de01e57fe7
+          image: IMAGE_PLACEHOLDER
 
           ports:
             - containerPort: 3000
