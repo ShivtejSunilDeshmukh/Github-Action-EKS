@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Cloud Dashboard</title>
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <main class="container">
+
+    <!-- Header -->
+    <header class="header">
+
+      <div class="brand">
+        <div class="brand-icon">☁</div>
+
+        <div>
+          <h1>Cloud Dashboard</h1>
+          <p>Node.js · Docker · AWS · EKS</p>
+        </div>
+      </div>
+
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>System Online</span>
+      </div>
+
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          DEPLOYMENT READY
+        </span>
+
+        <h2>
+          Your application is
+          <span>running.</span>
+        </h2>
+
+        <p>
+          This application is built with Node.js and Express,
+          containerized with Docker, and designed to run on
+          Kubernetes and AWS EKS.
+        </p>
+
+        <button id="healthButton">
+          Check Application Health
+        </button>
+
+        <div id="healthResult" class="health-result">
+          Click the button to check the backend.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Stats -->
+    <section class="stats">
+
+      <div class="card">
+        <div class="card-icon purple">⚡</div>
+
+        <div>
+          <span class="label">Application</span>
+          <strong id="appName">Loading...</strong>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-icon blue">◈</div>
+
+        <div>
+          <span class="label">Version</span>
+          <strong id="appVersion">Loading...</strong>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-icon green">✓</div>
+
+        <div>
+          <span class="label">Environment</span>
+          <strong id="environment">Loading...</strong>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-icon orange">☸</div>
+
+        <div>
+          <span class="label">Platform</span>
+          <strong id="platform">Loading...</strong>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Architecture -->
+    <section class="architecture">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">ARCHITECTURE</span>
+
+          <h3>Deployment Pipeline</h3>
+        </div>
+      </div>
+
+
+      <div class="pipeline">
+
+        <div class="pipeline-item">
+          <div class="pipeline-icon">⌨</div>
+          <span>GitHub</span>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="pipeline-item">
+          <div class="pipeline-icon">⚙</div>
+          <span>GitHub Actions</span>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="pipeline-item">
+          <div class="pipeline-icon">◉</div>
+          <span>AWS ECR</span>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="pipeline-item">
+          <div class="pipeline-icon">☸</div>
+          <span>AWS EKS</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+      <span>
+        Cloud Dashboard
+      </span>
+
+      <span id="clock">
+        --
+      </span>
+
+    </footer>
+
+  </main>
+
+  <script src="/app.js"></script>
+
+</body>
+</html>
