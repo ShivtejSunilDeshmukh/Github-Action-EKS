@@ -83,10 +83,10 @@ jobs:
         run: |
           docker tag \
             cloud-dashboard:${{ github.sha }} \
-            ${{ steps.login-ecr.outputs.registry }}/github-actions-eks:${{ github.sha }}
+            ${{ steps.login-ecr.outputs.registry }}/ssd-github-actions-eks:${{ github.sha }}
 
 
       - name: Push Docker image
         run: |
           docker push \
-            ${{ steps.login-ecr.outputs.registry }}/github-actions-eks:${{ github.sha }}
+            ${{ steps.login-ecr.outputs.registry }}/ssd-github-actions-eks:${{ github.sha }}
