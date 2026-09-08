@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: cloud-dashboard
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: cloud-dashboard
+
+  template:
+    metadata:
+      labels:
+        app: cloud-dashboard
+
+    spec:
+      containers:
+        - name: cloud-dashboard
+
+          image: 720204292745.dkr.ecr.ap-south-1.amazonaws.com/ssd-github-actions-eks:1b03927708c9b337e0d21d9aacd657de01e57fe7
+
+          ports:
+            - containerPort: 3000
+
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
